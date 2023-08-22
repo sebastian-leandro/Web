@@ -1,17 +1,3 @@
-// BackGround 
-
-function initEffects() {
-    const effects = document.querySelectorAll('.effects');
-    effects.forEach(effects => {
-        effects.style.left = Math.random() * window.innerWidth + 'px';
-        effects.style.top = Math.random() * window.innerHeight + 'px';
-    });
-}
-
-initEffects();
-
-
-
 // Calc 
 
 let runningTotal = 0;
