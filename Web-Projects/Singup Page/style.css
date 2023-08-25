@@ -27,24 +27,33 @@ body {
 }
 
 
-.background {
+  
+  .background {
     position: absolute;
-    top: -50vmin;
-    left: -50vmin;
-    width: 100vmin;
-    height: 100vmin;
-    border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+    bottom:-10%;
+    right: -10%;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
     background: #65c8ff;
     z-index: -1;
-    animation:  rotate 15s infinite alternate;
-}
-
-.background .after {
-    position: absolute;
-    top: -50vmin;
-    left: -50vmin;
-    animation-name: rotateE;
+    animation:  rotate 7s infinite alternate-reverse ;
   }
+
+
+  .background--after{
+    position: absolute;
+    top:-10%;
+    left: -10%;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+    background:  #432371;
+    z-index: -1;
+    animation:  derotate 7s infinite alternate-reverse ;
+  }
+  
+
 
 
 .card {
@@ -154,20 +163,25 @@ form input {
 
 
 
+
 @keyframes rotate {
     0% {
-      transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
     }
     100% {
-      transform: translateY(50%) translateX(50%);
+        transform: translateY(-100%) translateX(-100%) ;
+        
     }
-  }
-  
-  @keyframes rotateE {
+
+}
+
+
+@keyframes derotate {
     0% {
-      transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
     }
+
     100% {
-      transform: translateY(-50%) translateX(-50%);
+        transform: translateY(100%) translateX(100%); 
     }
-  }
+}
